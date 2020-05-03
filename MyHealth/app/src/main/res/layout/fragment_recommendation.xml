@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.recommendation.RecommendationFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_maintain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Таны өдөрт авах илчлэгийн хэмжээ"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.339"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/txt_rdi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.493"
+                android:visibility="gone"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TableLayout
+            android:id="@+id/tbl_recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="3"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rdBtn_easy"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Амархан" />
+
+                    <RadioButton
+                        android:id="@+id/rdBtn_normal"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Дунд" />
+
+                    <RadioButton
+                        android:id="@+id/rdBtn_hard"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Хэцүү" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/txt_easy_rdi"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:paddingTop="5dp"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/txt_normal_rdi"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:paddingTop="5dp"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/txt_hard_rdi"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:paddingTop="5dp"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txt_easy_date"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:paddingTop="5dp"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/txt_normal_date"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:paddingTop="5dp"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/txt_hard_date"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:paddingTop="5dp"
+                    android:textAlignment="center" />
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="150dp"
+            android:enabled="false"
+            android:text="Үргэлжлүүлэх"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

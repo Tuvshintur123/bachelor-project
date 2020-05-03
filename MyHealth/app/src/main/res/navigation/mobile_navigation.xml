@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.myhealth.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.myhealth.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_navigation_search"
+            app:destination="@id/navigation_search" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_diet"
+        android:name="com.example.myhealth.ui.diet.DietFragment"
+        android:label="@string/title_diet"
+        tools:layout="@layout/fragment_diet" />
+    <fragment
+        android:id="@+id/navigation_water"
+        android:name="com.example.myhealth.ui.water.WaterFragment"
+        android:label="@string/title_water"
+        tools:layout="@layout/fragment_water" />
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.myhealth.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.myhealth.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_navigation_search_to_foodDetailFragment"
+            app:destination="@id/foodDetailFragment" />
+        <action
+            android:id="@+id/action_navigation_search_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_meal_detail"
+        android:name="com.example.myhealth.ui.meal_detail.MealDetailFragment"
+        android:label="fragment_meal_detail"
+        tools:layout="@layout/fragment_meal_detail" />
+    <fragment
+        android:id="@+id/foodDetailFragment"
+        android:name="com.example.myhealth.ui.food_detail.FoodDetailFragment"
+        android:label="fragment_food_detail"
+        tools:layout="@layout/fragment_food_detail" />
+</navigation>

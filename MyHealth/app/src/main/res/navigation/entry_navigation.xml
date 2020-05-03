@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/entry_navigation"
+    app:startDestination="@id/navigation_login">
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.example.myhealth.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/navigate_login_to_question_goal"
+            app:destination="@id/navigation_question_goal" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_signUp"
+        android:name="com.example.myhealth.ui.signup.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/navigate_signUp_to__login"
+            app:destination="@id/navigation_login" />
+        <action
+            android:id="@+id/navigate_signUp_to_recommendation"
+            app:destination="@id/navigation_recommendation" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_question_goal"
+        android:name="com.example.myhealth.ui.question.QuestionGoalFragment"
+        android:label="fragment_question_goal"
+        tools:layout="@layout/fragment_question_goal" >
+        <action
+            android:id="@+id/navigate_question_goal_to_question_gender"
+            app:destination="@id/navigation_question_gender" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_question_current_weight"
+        android:name="com.example.myhealth.ui.question.QuestionCurrentWeightFragment"
+        android:label="fragment_question_current_weight_fragment"
+        tools:layout="@layout/fragment_question_current_weight" >
+        <action
+            android:id="@+id/navigate_question_current_weight_to_question_height"
+            app:destination="@id/navigation_question_height" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_question_gender"
+        android:name="com.example.myhealth.ui.question.QuestionGenderFragment"
+        android:label="fragment_question_gender"
+        tools:layout="@layout/fragment_question_gender" >
+        <action
+            android:id="@+id/navigate_question_gender_to_question_activity_level"
+            app:destination="@id/navigation_question_activity_level" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_question_activity_level"
+        android:name="com.example.myhealth.ui.question.QuestionActivityLevelFragment"
+        android:label="fragment_question_activity_level"
+        tools:layout="@layout/fragment_question_activity_level" >
+        <action
+            android:id="@+id/navigate_question_activity_level_to_question_current_weight"
+            app:destination="@id/navigation_question_current_weight" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_question_height"
+        android:name="com.example.myhealth.ui.question.QuestionHeightFragment"
+        android:label="fragment_question_height"
+        tools:layout="@layout/fragment_question_height" >
+        <action
+            android:id="@+id/navigate_question_height_to_question_birthday"
+            app:destination="@id/navigation_question_birthday" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_question_birthday"
+        android:name="com.example.myhealth.ui.question.QuestionBirthdayFragment"
+        android:label="fragment_question_birthday"
+        tools:layout="@layout/fragment_question_birthday" >
+        <action
+            android:id="@+id/navigate_question_birthday_to_question_target_weight"
+            app:destination="@id/navigation_question_target_weight" />
+        <action
+            android:id="@+id/navigate_question_birthday_to_signUp"
+            app:destination="@id/navigation_signUp" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_question_target_weight"
+        android:name="com.example.myhealth.ui.question.QuestionTargetWeightFragment"
+        android:label="fragment_question_target_weight"
+        tools:layout="@layout/fragment_question_target_weight" >
+        <action
+            android:id="@+id/navigate_question_target_weight_to_signUp"
+            app:destination="@id/navigation_signUp" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_recommendation"
+        android:name="com.example.myhealth.ui.recommendation.RecommendationFragment"
+        android:label="fragment_recommendation"
+        tools:layout="@layout/fragment_recommendation" />
+</navigation>
